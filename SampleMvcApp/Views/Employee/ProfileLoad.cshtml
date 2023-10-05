@@ -1,0 +1,52 @@
+﻿@model SampleMvcApp.Models.ProfileClass
+
+@{
+    ViewBag.Title = "ProfileLoad";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ProfileLoad</h2>
+div>
+
+@using (Html.BeginForm("ProfileLoad", "Employee", FormMethod.Post))
+{
+    <div>
+        <label>Name:</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.name)
+    </div>
+    <div>
+        <label>Age:</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.age)
+    </div>
+    <div>
+        <label>Address:</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.address)
+    </div>
+    <div>
+        <label>Email:</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.email)
+    </div>
+    <div>
+        <label>Photo:</label>
+    </div>
+    <div>
+        <img src="@Url.Content(Model.photo)" alt="Hai" height="300px" width="250px" />
+    </div>
+    <div>
+        @Html.ActionLink("Back to Home Page", "Home", "Login")
+    </div>
+
+}
+
+
+
+</div>
+

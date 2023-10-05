@@ -120,13 +120,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmployeeReg.cs" />
+    <Compile Include="Models\LoginClass.cs" />
+    <Compile Include="Models\ProfileClass.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\EmployeeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -165,9 +170,15 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\EmployeeReg\AddEmployee.cshtml" />
+    <Content Include="Views\Employee\RegisterPageLoad.cshtml" />
+    <Content Include="Views\Employee\LoginPageLoad.cshtml" />
+    <Content Include="Views\Employee\Home.cshtml" />
+    <Content Include="Views\Employee\ProfileLoad.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="pic\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

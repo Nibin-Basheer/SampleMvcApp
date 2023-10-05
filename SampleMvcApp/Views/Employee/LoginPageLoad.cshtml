@@ -1,0 +1,41 @@
+﻿@model SampleMvcApp.Models.LoginClass
+
+@{
+    ViewBag.Title = "LoginPageLoad";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login </h2>
+<div>
+    @using (Html.BeginForm("LoginClick", "Employee", FormMethod.Post))
+    {
+        <div>
+            <label>Username:</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.username)
+            @Html.ValidationMessageFor(m => m.username)
+
+        </div>
+        <br />
+        <div>
+            <label>Password:</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.password)
+            @Html.ValidationMessageFor(m => m.password)
+        </div>
+        <br />
+        <div>
+            <input type="submit" value="Login" />
+            @Html.DisplayFor(m => m.message)
+        </div>
+        <br />
+        <div>
+            <label>Don't have an account?</label>
+            @Html.ActionLink("Register", "RegisterPageLoad", "Employee");
+        </div>
+    }
+</div>
+
+
