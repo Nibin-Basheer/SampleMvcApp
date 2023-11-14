@@ -73,7 +73,11 @@ namespace SampleMvcApp.Controllers
         public ActionResult ProfileLoad(LoginClass ob,ProfileClass objcls)
         {
             bool getdata = empobj.EmployeeProfile(ob, objcls);
-            return View("ProfileLoad", objcls);
+            if (getdata)
+            {
+                return View("ProfileLoad", objcls);
+            }
+            return RedirectToAction("Home");
         }
     }
 }

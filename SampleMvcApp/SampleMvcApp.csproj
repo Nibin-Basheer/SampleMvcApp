@@ -129,9 +129,10 @@
     <Compile Include="Models\EmployeeReg.cs" />
     <Compile Include="Models\LoginClass.cs" />
     <Compile Include="Models\ProfileClass.cs" />
-    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\EmployeeRepository.cs" />
+    <Compile Include="Repository\StudentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -175,6 +176,10 @@
     <Content Include="Views\Employee\LoginPageLoad.cshtml" />
     <Content Include="Views\Employee\Home.cshtml" />
     <Content Include="Views\Employee\ProfileLoad.cshtml" />
+    <Content Include="Views\Student\AddStudent.cshtml" />
+    <Content Include="Views\Student\GetAllStudents.cshtml" />
+    <Content Include="Views\Student\EditStudentDetails.cshtml" />
+    <Content Include="Views\Student\StudentDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

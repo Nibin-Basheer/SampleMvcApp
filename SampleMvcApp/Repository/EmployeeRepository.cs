@@ -75,7 +75,12 @@ namespace SampleMvcApp.Repository
         public bool EmployeeProfile(LoginClass obj,ProfileClass ob)
         {
             SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "sp_profile";
+
             cmd.CommandType = CommandType.StoredProcedure;
+
+           
 
             cmd.Parameters.Add("@username");
 

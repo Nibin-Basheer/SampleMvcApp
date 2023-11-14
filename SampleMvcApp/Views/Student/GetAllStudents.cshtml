@@ -1,0 +1,69 @@
+﻿@model IEnumerable<SampleMvcApp.Models.StudentClass>
+
+<p>
+    @Html.ActionLink("Create New", "AddStudent")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.age)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.address)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.photo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.username)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.password)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "EditStudentDetails", new { id = item.id }) |
+        @Html.ActionLink("Details", "StudentDetails", new { id = item.id }) |
+        @Html.ActionLink("Delete", "DeleteStudent", new { id = item.id })
+    </td>
+</tr>
+}
+
+</table>
